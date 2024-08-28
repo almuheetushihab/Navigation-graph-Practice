@@ -5,10 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import com.example.navigation_graph_practice.databinding.FragmentCarBinding
 
 class CarFragment : Fragment() {
     private lateinit var binding: FragmentCarBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +27,11 @@ class CarFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.button.setOnClickListener {
+            val navController: NavController = view.findNavController()
+            navController.navigate(R.id.action_carFragment_to_carDetailsFragment22)
 
+        }
     }
 
 

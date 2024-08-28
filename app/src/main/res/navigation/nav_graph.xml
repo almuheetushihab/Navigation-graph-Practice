@@ -10,13 +10,19 @@
         android:name="com.example.navigation_graph_practice.CarFragment"
         android:label="fragment_car"
         tools:layout="@layout/fragment_car" >
+
         <action
-            android:id="@+id/action_carFragment_to_carDetailsFragment2"
+            android:id="@+id/action_carFragment_to_carDetailsFragment22"
             app:destination="@id/carDetailsFragment2" />
     </fragment>
     <fragment
         android:id="@+id/carDetailsFragment2"
         android:name="com.example.navigation_graph_practice.CarDetailsFragment"
         android:label="car_details_fragment"
-        tools:layout="@layout/car_details_fragment" />
+        tools:layout="@layout/car_details_fragment" >
+
+        <action
+            android:id="@+id/action_carDetailsFragment2_to_carFragment2"
+            app:destination="@id/carFragment" />
+    </fragment>
 </navigation>

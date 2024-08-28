@@ -4,4 +4,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_car_fragment">Hello Car Fragment</string>
     <string name="hi_car_details_fragment">Hi Car Details Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 </resources>
