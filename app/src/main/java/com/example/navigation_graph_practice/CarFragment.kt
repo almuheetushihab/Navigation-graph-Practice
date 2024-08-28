@@ -28,6 +28,7 @@ class CarFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.button.setOnClickListener {
+
             val navController: NavController = view.findNavController()
             navController.navigate(R.id.action_carFragment_to_carDetailsFragment22)
 
