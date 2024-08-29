@@ -7,11 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.navigation_graph_practice.databinding.CarDetailsFragmentBinding
 
 
 class CarDetailsFragment : Fragment() {
     private lateinit var binding: CarDetailsFragmentBinding
+    private val args: CarDetailsFragmentArgs by navArgs()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,13 +28,21 @@ class CarDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.buttonSecond.setOnClickListener {
 
+        val string = args.data
+        binding.textView.text = string
+
+
+
+
+        binding.buttonSecond.setOnClickListener {
             val navController: NavController = view.findNavController()
-            navController.navigate(R.id.action_carDetailsFragment2_to_carFragment2)
+            val action = CarDetailsFragmentDirections.actionCarDetailsFragment2ToCarFragment2()
+            navController.navigate(action)
         }
 
 
     }
 
 }
+
